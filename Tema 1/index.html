@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Formulario de contacto</h2>
+    <form action="Repuesta.php" method="post">
+        <label>Nombre completo</label>
+        <input type="text" name="nombre" placeholder="Nombre">
+        <input type="text" name="apellidos" placeholder="Apellidos">
+
+        <br>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Ejemplo@gmail.com">
+        <label>Numero telefono</label>
+        <input type="tel" name="telefono" placeholder="Telefono">
+
+        <br>
+        <br>
+
+        <label>Tipo de persona</label>
+        <select name="Seleccion" name="seleccion">
+            <option value="0">-Seleccion-</option>
+            <option value="1">Empresa</option>
+            <option value="2">Particular</option>
+            <option value="3">Estudiante</option>
+        </select>
+        
+        <br>
+
+        <label>Radio</label>
+        <input type="radio" value="mayor" name="Radio"><span>Mayor de 18</span>
+        <input type="radio" value="menor" name="Radio"><span>Menor de 18</span>
+
+        <br>
+        <br>
+        <label>Seleccion de opciones</label>
+        <input type="checkbox" value="1" name="chbox[]">
+        <input type="checkbox" value="2" name="chbox[]">
+        <input type="checkbox" value="3" name="chbox[]">
+
+        <br>
+
+        <p>Motivos del formulario</p>
+        <textarea rows="3" placeholder="Area de texto" name="area"></textarea>
+
+        <br>
+
+        <input type="submit" value="Aceptar">
+        <input type="reset" value="Reset">
+
+
+    </form>
+</body>
+</html>
