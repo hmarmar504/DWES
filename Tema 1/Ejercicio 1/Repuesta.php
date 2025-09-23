@@ -22,11 +22,14 @@
 
     print "<h1>Los datos introducidos son:</h1><br>";
     echo "<h2>Nombre completo: " .$nombreCompleto."</h2>";
-    echo "<p>sus opciones son: </p>";
-
+    echo "<p>sus opciones son:.".$seleccion." </p>";
+    echo "<p>su genero es:.".$radio." </p>";
+    echo "<p>su correo es:.".$correo." </p>";
+    echo "<p>su telefono es:.".$telefono." </p>";
+    echo "<p>sus aficiones son:.</p>";
     $n = count ($chboxs);
-    for ($i=0; $i<$n; $i++)
-        echo ($chboxs[$i]."<BR>\n");
+    for ($i=0; $i<count($chboxs); $i++)
+        echo ($chboxs[$i]."\n");
     ?>
 </body>
 </html>
