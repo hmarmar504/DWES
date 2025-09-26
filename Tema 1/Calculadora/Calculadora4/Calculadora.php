@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
     <form action="calculadora.php">
-        <input type="text" id="primerNumero" placeholder="Primer numero" name="num1">
+    <input type="text" id="primerNumero" placeholder="Primer numero" name="num1">
         <input type="text" id="segundoNumero" placeholder="Segundo numero" name="num2">
         <br>
-        <input type="radio" name="operacion" value="sumar" checked>+
-        <input type="radio" name="operacion" value="restar">-
-        <input type="radio" name="operacion" value="multiplicar">*
-        <input type="radio" name="operacion" value="dividir">/
+        <select name="operacion[]" multiple>
+            <option value="sumar">+</option>
+            <option value="restar">-</option>
+            <option value="multiplicar">*</option>
+            <option value="dividir">/</option>
+        </select>
         <br>
         <input type="submit" value="Calcular" id="calcular">
         <input type="reset" value="Limpiar">
@@ -24,7 +25,8 @@
         $num2 = $_REQUEST['num2'];
         $operacion = $_REQUEST['operacion'];
 
-        switch ($operacion) {
+        foreach ($operacion as $op) {
+        switch ($op) {
             case 'sumar':
                 $resultado=$num1+$num2;
                 break;
@@ -45,8 +47,8 @@
                 $resultado = "Operación no válida";
                 break;
         }
-
-        echo "<h1>El resultado de la operación es: " . $resultado . "</h1>";
+        echo "<h1>El resultado de la " . $op . " es: " . $resultado . "</h1>";
+    }
         ?>
 </body>
 </html>
