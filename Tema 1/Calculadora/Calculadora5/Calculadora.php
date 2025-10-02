@@ -9,7 +9,7 @@
 
    
         <h1>Calculadora</h1>
-        <form action="index.php" method="post">
+        <form action="Calculadora.php" method="post">
     <input type="text" id="primerNumero" placeholder="Primer numero" name="num1">
         <input type="text" id="segundoNumero" placeholder="Segundo numero" name="num2">
         <br>
